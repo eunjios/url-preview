@@ -1,5 +1,7 @@
+import Url from './components/Url';
+
 function App() {
-  return <div>hello</div>;
+  return <Url />;
 }
 
 export default App;
