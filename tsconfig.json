@@ -4,7 +4,7 @@
     "module": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -15,8 +15,14 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "outDir": "./dist",
+    "rootDir": "."
   },
-  "include": ["src", "vite.config.js"],
-  "exclude": ["node_modules", "build", "dist"]
+  "include": ["src", "vite.config.ts", "server/**/*"],
+  "exclude": ["node_modules", "build", "dist"],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
 }
